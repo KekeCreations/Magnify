@@ -1,5 +1,6 @@
 package com.kekecreations.magnify.core.registry;
 
+import com.illusivesoulworks.comforts.common.ComfortsRegistry;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.magnify.common.util.CompatUtils;
@@ -15,6 +16,20 @@ import java.util.function.Supplier;
 public class MagnifyCreativeTabs {
 
 static {
+    if (Services.PLATFORM.isModLoaded(CompatUtils.COMFORTS)) {
+        final Supplier<CreativeModeTab> COMFORTS_TAB = registerCreativeModeTab("comforts_tab",
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(ComfortsRegistry.ROPE_AND_NAIL_ITEM.get()))
+                        .title(Component.translatable("magnify.comforts_tab"))
+                        .displayItems((pParameters, pOutput) -> {
+                            pOutput.accept(ComfortsRegistry.ROPE_AND_NAIL_ITEM.get());
+                            ComfortsRegistry.HAMMOCKS.forEach((dyeColor, blockRegistryObject) -> {
+                                pOutput.accept(blockRegistryObject.get());
+                            });
+                            ComfortsRegistry.SLEEPING_BAGS.forEach((dyeColor, blockRegistryObject) -> {
+                                pOutput.accept(blockRegistryObject.get());
+                            });
+                        }).build());
+    }
     if (Services.PLATFORM.isModLoaded(CompatUtils.ARTS_AND_CRAFTS)) {
         final Supplier<CreativeModeTab> ARTS_AND_CRAFTS_TAB = registerCreativeModeTab("arts_and_crafts_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(ACItems.getPaintBrush(DyeColor.RED.getId())))

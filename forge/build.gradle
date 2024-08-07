@@ -9,6 +9,7 @@ base {
 
 dependencies {
     implementation fg.deobf("curse.maven:artsandcrafts-1034791:5579912")
+    implementation fg.deobf("curse.maven:comforts-276951:5503516")
 }
 
 minecraft {
