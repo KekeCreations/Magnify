@@ -10,6 +10,8 @@ base {
 dependencies {
     implementation fg.deobf("curse.maven:artsandcrafts-1034791:5579912")
     implementation fg.deobf("curse.maven:comforts-276951:5503516")
+    implementation fg.deobf("curse.maven:clayworks-592162:5302012")
+    implementation fg.deobf("curse.maven:blueprint-382216:5292242")
 }
 
 minecraft {
