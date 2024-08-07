@@ -1,6 +1,6 @@
-package com.kekecreations.magnify.platform;
+package com.kekecreations.magnify.core.platform;
 
-import com.kekecreations.magnify.platform.services.IRegistryHelper;
+import com.kekecreations.magnify.core.platform.services.IRegistryHelper;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTab;

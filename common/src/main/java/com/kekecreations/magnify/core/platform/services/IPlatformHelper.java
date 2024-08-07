@@ -1,4 +1,4 @@
-package com.kekecreations.magnify.platform.services;
+package com.kekecreations.magnify.core.platform.services;
 
 public interface IPlatformHelper {
 

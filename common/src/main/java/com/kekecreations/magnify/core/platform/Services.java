@@ -1,8 +1,8 @@
-package com.kekecreations.magnify.platform;
+package com.kekecreations.magnify.core.platform;
 
 import com.kekecreations.magnify.Magnify;
-import com.kekecreations.magnify.platform.services.IPlatformHelper;
-import com.kekecreations.magnify.platform.services.IRegistryHelper;
+import com.kekecreations.magnify.core.platform.services.IPlatformHelper;
+import com.kekecreations.magnify.core.platform.services.IRegistryHelper;
 
 import java.util.ServiceLoader;
 
