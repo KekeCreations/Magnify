@@ -32,8 +32,7 @@ dependencies {
     modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.1"
     modImplementation "curse.maven:spectrelib-993948:5217601"
     modImplementation 'com.electronwill.night-config:toml:3.6.0'
-    //implementation group: 'com.electronwill.night-config', name: 'core', version: '3.6.5'
-    //modImplementation group: 'com.illusivesoulworks.spectrelib', name: 'spectrelib-fabric', version: "0.13.15,0.14"
+    modImplementation "curse.maven:caffeinated-835826:4659359"
 }
 
 loom {
