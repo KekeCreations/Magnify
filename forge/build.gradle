@@ -7,6 +7,10 @@ base {
     archivesName = "${mod_name}-forge-${minecraft_version}"
 }
 
+dependencies {
+    implementation fg.deobf("curse.maven:artsandcrafts-1034791:5579912")
+}
+
 minecraft {
     mappings channel: 'official', version: minecraft_version
 

@@ -18,6 +18,9 @@ dependencies {
     //DEV QOL
     modImplementation "curse.maven:modmenu-308702:5162837"
     modImplementation "curse.maven:jei-238222:5604705"
+
+    //COMPAT
+    modImplementation "curse.maven:artsandcrafts-1034791:5579910"
 }
 
 loom {
