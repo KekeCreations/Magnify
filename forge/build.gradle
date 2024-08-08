@@ -12,6 +12,7 @@ dependencies {
     implementation fg.deobf("curse.maven:comforts-276951:5503516")
     implementation fg.deobf("curse.maven:clayworks-592162:5302012")
     implementation fg.deobf("curse.maven:blueprint-382216:5292242")
+    implementation fg.deobf("curse.maven:jolly-boxes-410698:4990867")
 }
 
 minecraft {

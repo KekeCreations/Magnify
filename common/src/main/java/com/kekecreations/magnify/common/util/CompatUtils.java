@@ -6,4 +6,5 @@ public class CompatUtils {
     public static final String COMFORTS = "comforts";
     public static final String CAFFEINATED = "caffeinated";
     public static final String CLAYWORKS = "clayworks";
+    public static final String JOLLY_BOXES = "jolly_boxes";
 }

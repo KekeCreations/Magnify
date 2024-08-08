@@ -1,5 +1,6 @@
 package com.kekecreations.magnify.core.registry;
 
+import blueduck.jollyboxes.registry.JollyBoxesBlocks;
 import com.illusivesoulworks.comforts.common.ComfortsRegistry;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -12,12 +13,23 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 import java.util.function.Supplier;
 
 public class MagnifyForgeCreativeTabs {
 
 static {
+    if (Services.PLATFORM.isModLoaded(CompatUtils.JOLLY_BOXES)) {
+        final Supplier<CreativeModeTab> JOLLY_BOXES_TAB = registerCreativeModeTab("jolly_boxes_tab",
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(Items.CHEST))
+                        .title(Component.translatable("magnify.jolly_boxes_tab"))
+                        .displayItems((pParameters, pOutput) -> {
+                            pOutput.accept(JollyBoxesBlocks.SMALL_JOLLY_BOX.get());
+                            pOutput.accept(JollyBoxesBlocks.MEDIUM_JOLLY_BOX.get());
+                            pOutput.accept(JollyBoxesBlocks.LARGE_JOLLY_BOX.get());
+                        }).build());
+    }
     if (Services.PLATFORM.isModLoaded(CompatUtils.CLAYWORKS)) {
         final Supplier<CreativeModeTab> CLAYWORKS_TAB = registerCreativeModeTab("clayworks_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(ClayworksBlocks.KILN.get()))
