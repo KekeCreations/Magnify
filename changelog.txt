@@ -1,0 +1,10 @@
+Magnify Changelog
+
+
+V1.0.0
+• Added Arts & Crafts Support
+• Added Caffeinated Support
+• Added Clayworks Support
+• Added Comforts Support
+• Added Jolly Boxes Support
+• Added Dustrial Decor Support
