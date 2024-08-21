@@ -18,6 +18,7 @@ dependencies {
     implementation fg.deobf("curse.maven:blueprint-382216:5292242")
     implementation fg.deobf("curse.maven:jolly-boxes-410698:4990867")
     implementation fg.deobf("curse.maven:dustrial-decor-401273:5074515")
+    implementation fg.deobf("curse.maven:upgrade-aquatic-326895:5615651")
 }
 
 minecraft {

@@ -8,4 +8,5 @@ public class CompatUtils {
     public static final String CLAYWORKS = "clayworks";
     public static final String JOLLY_BOXES = "jolly_boxes";
     public static final String DUSTRIAL_DECOR = "dustrial_decor";
+    public static final String UPGRADE_AQUATIC = "upgrade_aquatic";
 }

@@ -1,5 +1,8 @@
 Magnify Changelog
 
+V1.1.0
+• Added Upgrade Aquatic Support
+
 
 V1.0.0
 • Added Arts & Crafts Support
