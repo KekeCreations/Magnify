@@ -14,6 +14,8 @@ import com.teamabnormals.upgrade_aquatic.core.UpgradeAquatic;
 import com.teamabnormals.upgrade_aquatic.core.registry.UABlocks;
 import com.teamabnormals.upgrade_aquatic.core.registry.UAItems;
 import com.teamabnormals.upgrade_aquatic.core.registry.UAMobEffects;
+import com.uraneptus.sullysmod.core.registry.SMBlocks;
+import com.uraneptus.sullysmod.core.registry.SMItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
@@ -31,6 +33,64 @@ static {
                             pOutput.accept(JollyBoxesBlocks.SMALL_JOLLY_BOX.get());
                             pOutput.accept(JollyBoxesBlocks.MEDIUM_JOLLY_BOX.get());
                             pOutput.accept(JollyBoxesBlocks.LARGE_JOLLY_BOX.get());
+                        }).build());
+    }
+    if (Services.PLATFORM.isModLoaded(CompatUtils.SULLYS_MOD)) {
+        final Supplier<CreativeModeTab> SULLYS_MOD_TAB = registerCreativeModeTab("sullysmod_tab",
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(SMBlocks.JADE_FLINGER_TOTEM.get()))
+                        .title(Component.translatable("magnify.sullys_mod_tab"))
+                        .displayItems((pParameters, pOutput) -> {
+                            pOutput.accept(SMBlocks.COPPER_BUTTON.get());
+                            pOutput.accept(SMBlocks.EXPOSED_COPPER_BUTTON.get());
+                            pOutput.accept(SMBlocks.WEATHERED_COPPER_BUTTON.get());
+                            pOutput.accept(SMBlocks.OXIDIZED_COPPER_BUTTON.get());
+                            pOutput.accept(SMBlocks.WAXED_COPPER_BUTTON.get());
+                            pOutput.accept(SMBlocks.WAXED_EXPOSED_COPPER_BUTTON.get());
+                            pOutput.accept(SMBlocks.WAXED_WEATHERED_COPPER_BUTTON.get());
+                            pOutput.accept(SMBlocks.WAXED_OXIDIZED_COPPER_BUTTON.get());
+                            pOutput.accept(SMItems.LANTERNFISH.get());
+                            pOutput.accept(SMItems.COOKED_LANTERNFISH.get());
+                            pOutput.accept(SMItems.GLASS_VIAL.get());
+                            pOutput.accept(SMItems.TORTOISE_SCUTE.get());
+                            pOutput.accept(SMItems.TORTOISE_SHELL.get());
+                            pOutput.accept(SMBlocks.TORTOISE_EGG.get());
+                            pOutput.accept(SMItems.TORTOISE_SPAWN_EGG.get());
+                            pOutput.accept(SMItems.BOULDERING_ZOMBIE_SPAWN_EGG.get());
+                            pOutput.accept(SMItems.JUNGLE_SPIDER_SPAWN_EGG.get());
+                            pOutput.accept(SMItems.LANTERNFISH_SPAWN_EGG.get());
+                            pOutput.accept(SMItems.MUSIC_DISC_SCOUR.get());
+                            pOutput.accept(SMItems.JADE_UPGRADE_SMITHING_TEMPLATE.get());
+                            pOutput.accept(SMItems.JADE_HORSE_ARMOR.get());
+                            pOutput.accept(SMBlocks.JADE_ORE.get());
+                            pOutput.accept(SMBlocks.DEEPSLATE_JADE_ORE.get());
+                            pOutput.accept(SMItems.ROUGH_JADE.get());
+                            pOutput.accept(SMBlocks.ROUGH_JADE_BLOCK.get());
+                            pOutput.accept(SMBlocks.SMOOTHED_ROUGH_JADE.get());
+                            pOutput.accept(SMBlocks.ROUGH_JADE_BRICKS.get());
+                            pOutput.accept(SMBlocks.ROUGH_JADE_BRICK_STAIRS.get());
+                            pOutput.accept(SMBlocks.ROUGH_JADE_BRICK_SLAB.get());
+                            pOutput.accept(SMBlocks.ROUGH_JADE_TILES.get());
+                            pOutput.accept(SMBlocks.ROUGH_JADE_TILE_STAIRS.get());
+                            pOutput.accept(SMBlocks.ROUGH_JADE_TILE_SLAB.get());
+                            pOutput.accept(SMItems.POLISHED_JADE.get());
+                            pOutput.accept(SMItems.JADE_SHIELD.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_BLOCK.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_BRICKS.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_BRICK_STAIRS.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_BRICK_SLAB.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_TILES.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_TILE_STAIRS.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_TILE_SLAB.get());
+                            pOutput.accept(SMBlocks.POLISHED_SMALL_JADE_BRICKS.get());
+                            pOutput.accept(SMBlocks.POLISHED_SMALL_JADE_BRICK_STAIRS.get());
+                            pOutput.accept(SMBlocks.POLISHED_SMALL_JADE_BRICK_SLAB.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_SHINGLES.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_SHINGLE_STAIRS.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_SHINGLE_SLAB.get());
+                            pOutput.accept(SMBlocks.POLISHED_JADE_PILLAR.get());
+                            pOutput.accept(SMBlocks.POLISHED_CHISELED_JADE.get());
+                            pOutput.accept(SMBlocks.JADE_TOTEM.get());
+                            pOutput.accept(SMBlocks.JADE_FLINGER_TOTEM.get());
                         }).build());
     }
     if (Services.PLATFORM.isModLoaded(CompatUtils.UPGRADE_AQUATIC)) {
