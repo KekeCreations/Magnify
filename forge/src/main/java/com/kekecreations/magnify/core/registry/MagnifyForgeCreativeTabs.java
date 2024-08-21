@@ -17,6 +17,7 @@ import com.teamabnormals.upgrade_aquatic.core.UpgradeAquatic;
 import com.teamabnormals.upgrade_aquatic.core.registry.UABlocks;
 import com.teamabnormals.upgrade_aquatic.core.registry.UAItems;
 import com.teamabnormals.upgrade_aquatic.core.registry.UAMobEffects;
+import com.uraneptus.snowpig.core.registry.SPItems;
 import com.uraneptus.sullysmod.core.registry.SMBlocks;
 import com.uraneptus.sullysmod.core.registry.SMItems;
 import net.minecraft.network.chat.Component;
@@ -36,6 +37,17 @@ static {
                             pOutput.accept(JollyBoxesBlocks.SMALL_JOLLY_BOX.get());
                             pOutput.accept(JollyBoxesBlocks.MEDIUM_JOLLY_BOX.get());
                             pOutput.accept(JollyBoxesBlocks.LARGE_JOLLY_BOX.get());
+                        }).build());
+    }
+    if (Services.PLATFORM.isModLoaded(CompatUtils.SNOW_PIG)) {
+        final Supplier<CreativeModeTab> SNOW_PIG_TAB = registerCreativeModeTab("snow_pig_tab",
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(SPItems.FROZEN_HAM.get()))
+                        .title(Component.translatable("magnify.snow_pig_tab"))
+                        .displayItems((pParameters, pOutput) -> {
+                            pOutput.accept(SPItems.MUSIC_DISC_FROSTY_SNIG.get());
+                            pOutput.accept(SPItems.FROZEN_PORKCHOP.get());
+                            pOutput.accept(SPItems.FROZEN_HAM.get());
+                            pOutput.accept(SPItems.SNOW_PIG_EGG.get());
                         }).build());
     }
     if (Services.PLATFORM.isModLoaded(CompatUtils.BUZZIER_BEES)) {

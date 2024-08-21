@@ -7,6 +7,7 @@ import com.kekecreations.magnify.core.platform.Services;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.uraneptus.snowpig.core.registry.SnowPigItems;
 
 import java.util.function.Supplier;
 
@@ -26,6 +27,17 @@ public class MagnifyFabricCreativeTabs {
                                 pOutput.accept(CaffeinatedItems.COFFEE_BOTTLE);
                                 pOutput.accept(CaffeinatedItems.TIRAMISU);
                                 pOutput.accept(CaffeinatedItems.JAVA_BANNER_PATTERN);
+                            }).build());
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.SNOW_PIG)) {
+            final Supplier<CreativeModeTab> SNOW_PIG_TAB = registerCreativeModeTab("snow_pig_tab",
+                    () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(SnowPigItems.FROZEN_HAM))
+                            .title(Component.translatable("magnify.snow_pig_tab"))
+                            .displayItems((pParameters, pOutput) -> {
+                                pOutput.accept(SnowPigItems.MUSIC_DISC_FROSTY_SNIG);
+                                pOutput.accept(SnowPigItems.FROZEN_PORKCHOP);
+                                pOutput.accept(SnowPigItems.FROZEN_HAM);
+                                pOutput.accept(SnowPigItems.SNOW_PIG_EGG);
                             }).build());
         }
     }

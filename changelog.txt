@@ -7,6 +7,7 @@ V1.1.0
 • Added Sully's Mod Support
 • Added Boatload Support
 • Added Buzzier Bees Support
+• Added Snow Pig Support
 
 
 V1.0.0

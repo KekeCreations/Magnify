@@ -23,6 +23,7 @@ dependencies {
     implementation fg.deobf("curse.maven:geckolib-388172:5460309")
     implementation fg.deobf("curse.maven:boatload-337396:5292325")
     implementation fg.deobf("curse.maven:buzzier-bees-355458:5229011")
+    implementation fg.deobf("curse.maven:snow-pig-410500:5301670")
 }
 
 minecraft {

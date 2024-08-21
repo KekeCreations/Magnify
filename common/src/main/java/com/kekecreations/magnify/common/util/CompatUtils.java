@@ -12,4 +12,5 @@ public class CompatUtils {
     public static final String SULLYS_MOD = "sullysmod";
     public static final String BOATLOAD = "boatload";
     public static final String BUZZIER_BEES = "buzzier_bees";
+    public static final String SNOW_PIG = "snowpig";
 }

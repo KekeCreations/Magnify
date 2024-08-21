@@ -33,6 +33,7 @@ dependencies {
     modImplementation "curse.maven:spectrelib-993948:5217601"
     modImplementation 'com.electronwill.night-config:toml:3.6.0'
     modImplementation "curse.maven:caffeinated-835826:4659359"
+    modImplementation "curse.maven:snow-pig-fabric-469594:5396518"
 }
 
 loom {
