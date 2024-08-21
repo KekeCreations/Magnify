@@ -2,6 +2,8 @@ Magnify Changelog
 
 V1.1.0
 • Added Upgrade Aquatic Support
+• Changed Arts & Crafts Creative Category Icon
+• Changed Jolly Boxes Creative Category Icon
 
 
 V1.0.0

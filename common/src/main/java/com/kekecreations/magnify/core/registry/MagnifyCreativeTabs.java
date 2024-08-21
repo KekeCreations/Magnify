@@ -32,7 +32,7 @@ static {
     }
     if (Services.PLATFORM.isModLoaded(CompatUtils.ARTS_AND_CRAFTS)) {
         final Supplier<CreativeModeTab> ARTS_AND_CRAFTS_TAB = registerCreativeModeTab("arts_and_crafts_tab",
-                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(ACItems.getPaintBrush(DyeColor.RED.getId())))
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(ACItems.BLEACHDEW_PAINTBRUSH.get()))
                         .title(Component.translatable("magnify.arts_and_crafts_tab"))
                         .displayItems((pParameters, pOutput) -> {
                             pOutput.accept(ACBlocks.CORK_SAPLING.get());

@@ -25,7 +25,7 @@ public class MagnifyForgeCreativeTabs {
 static {
     if (Services.PLATFORM.isModLoaded(CompatUtils.JOLLY_BOXES)) {
         final Supplier<CreativeModeTab> JOLLY_BOXES_TAB = registerCreativeModeTab("jolly_boxes_tab",
-                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(Items.CHEST))
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(JollyBoxesBlocks.LARGE_JOLLY_BOX.get()))
                         .title(Component.translatable("magnify.jolly_boxes_tab"))
                         .displayItems((pParameters, pOutput) -> {
                             pOutput.accept(JollyBoxesBlocks.SMALL_JOLLY_BOX.get());
