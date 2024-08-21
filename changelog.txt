@@ -6,6 +6,7 @@ V1.1.0
 • Changed Jolly Boxes Creative Category Icon
 • Added Sully's Mod Support
 • Added Boatload Support
+• Added Buzzier Bees Support
 
 
 V1.0.0

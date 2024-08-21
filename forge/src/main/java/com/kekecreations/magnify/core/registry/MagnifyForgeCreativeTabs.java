@@ -9,6 +9,8 @@ import com.kekecreations.magnify.common.util.CompatUtils;
 import com.kekecreations.magnify.common.util.CreativeCategoryUtils;
 import com.kekecreations.magnify.core.platform.Services;
 import com.teamabnormals.boatload.core.registry.BoatloadItems;
+import com.teamabnormals.buzzier_bees.core.registry.BBBlocks;
+import com.teamabnormals.buzzier_bees.core.registry.BBItems;
 import com.teamabnormals.clayworks.core.ClayworksConfig;
 import com.teamabnormals.clayworks.core.registry.ClayworksBlocks;
 import com.teamabnormals.upgrade_aquatic.core.UpgradeAquatic;
@@ -34,6 +36,40 @@ static {
                             pOutput.accept(JollyBoxesBlocks.SMALL_JOLLY_BOX.get());
                             pOutput.accept(JollyBoxesBlocks.MEDIUM_JOLLY_BOX.get());
                             pOutput.accept(JollyBoxesBlocks.LARGE_JOLLY_BOX.get());
+                        }).build());
+    }
+    if (Services.PLATFORM.isModLoaded(CompatUtils.BUZZIER_BEES)) {
+        final Supplier<CreativeModeTab> BUZZIER_BEES_TAB = registerCreativeModeTab("buzzier_bees_tab",
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(BBItems.BOTTLE_OF_BEE.get()))
+                        .title(Component.translatable("magnify.buzzier_bees_tab"))
+                        .displayItems((pParameters, pOutput) -> {
+                            pOutput.accept(BBItems.BOTTLE_OF_BEE.get());
+                            pOutput.accept(BBItems.BOTTLE_OF_SILVERFISH.get());
+                            pOutput.accept(BBItems.BOTTLE_OF_ENDERMITE.get());
+                            pOutput.accept(BBBlocks.PINK_CLOVER.get());
+                            pOutput.accept(BBBlocks.WHITE_CLOVER.get());
+                            pOutput.accept(BBBlocks.BUTTERCUP.get());
+                            pOutput.accept(BBItems.FOUR_LEAF_CLOVER.get());
+                            pOutput.accept(BBItems.HONEYCOMB_BANNER_PATTERN.get());
+                            pOutput.accept(BBItems.MOOBLOOM_SPAWN_EGG.get());
+                            pOutput.accept(BBItems.GRIZZLY_BEAR_SPAWN_EGG.get());
+                            pOutput.accept(BBBlocks.SOUL_CANDLE.get());
+                            pOutput.accept(BBBlocks.HONEY_LAMP.get());
+                            pOutput.accept(BBBlocks.CRYSTALLIZED_HONEY_BLOCK.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_BRICKS.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_BRICK_STAIRS.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_BRICK_SLAB.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_BRICK_WALL.get());
+                            pOutput.accept(BBBlocks.CHISELED_HONEYCOMB_BRICKS.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_TILES.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_TILE_STAIRS.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_TILE_SLAB.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_TILE_WALL.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_TRAPDOOR.get());
+                            pOutput.accept(BBBlocks.HONEYCOMB_DOOR.get());
+                            pOutput.accept(BBItems.HONEY_APPLE.get());
+                            pOutput.accept(BBItems.GLAZED_PORKCHOP.get());
+                            pOutput.accept(BBItems.HONEY_BREAD.get());
                         }).build());
     }
     if (Services.PLATFORM.isModLoaded(CompatUtils.BOATLOAD)) {
