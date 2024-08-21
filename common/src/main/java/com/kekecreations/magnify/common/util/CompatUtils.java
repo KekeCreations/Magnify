@@ -10,4 +10,5 @@ public class CompatUtils {
     public static final String DUSTRIAL_DECOR = "dustrial_decor";
     public static final String UPGRADE_AQUATIC = "upgrade_aquatic";
     public static final String SULLYS_MOD = "sullysmod";
+    public static final String BOATLOAD = "boatload";
 }

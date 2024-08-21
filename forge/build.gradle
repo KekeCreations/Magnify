@@ -21,6 +21,7 @@ dependencies {
     implementation fg.deobf("curse.maven:upgrade-aquatic-326895:5615651")
     implementation fg.deobf("curse.maven:sullys-mod-386534:5043956")
     implementation fg.deobf("curse.maven:geckolib-388172:5460309")
+    implementation fg.deobf("curse.maven:boatload-337396:5292325")
 }
 
 minecraft {

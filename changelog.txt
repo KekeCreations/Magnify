@@ -5,6 +5,7 @@ V1.1.0
 • Changed Arts & Crafts Creative Category Icon
 • Changed Jolly Boxes Creative Category Icon
 • Added Sully's Mod Support
+• Added Boatload Support
 
 
 V1.0.0

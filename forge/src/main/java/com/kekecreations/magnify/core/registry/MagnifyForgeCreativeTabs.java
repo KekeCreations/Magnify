@@ -8,6 +8,7 @@ import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.magnify.common.util.CompatUtils;
 import com.kekecreations.magnify.common.util.CreativeCategoryUtils;
 import com.kekecreations.magnify.core.platform.Services;
+import com.teamabnormals.boatload.core.registry.BoatloadItems;
 import com.teamabnormals.clayworks.core.ClayworksConfig;
 import com.teamabnormals.clayworks.core.registry.ClayworksBlocks;
 import com.teamabnormals.upgrade_aquatic.core.UpgradeAquatic;
@@ -33,6 +34,39 @@ static {
                             pOutput.accept(JollyBoxesBlocks.SMALL_JOLLY_BOX.get());
                             pOutput.accept(JollyBoxesBlocks.MEDIUM_JOLLY_BOX.get());
                             pOutput.accept(JollyBoxesBlocks.LARGE_JOLLY_BOX.get());
+                        }).build());
+    }
+    if (Services.PLATFORM.isModLoaded(CompatUtils.BOATLOAD)) {
+        final Supplier<CreativeModeTab> BOATLOAD_TAB = registerCreativeModeTab("boatload_tab",
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(BoatloadItems.LARGE_CRIMSON_BOAT.get()))
+                        .title(Component.translatable("magnify.boatload_tab"))
+                        .displayItems((pParameters, pOutput) -> {
+                            pOutput.accept(BoatloadItems.CRIMSON_BOAT.get());
+                            pOutput.accept(BoatloadItems.CRIMSON_CHEST_BOAT.get());
+                            pOutput.accept(BoatloadItems.WARPED_BOAT.get());
+                            pOutput.accept(BoatloadItems.WARPED_CHEST_BOAT.get());
+                            pOutput.accept(BoatloadItems.OAK_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.SPRUCE_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.BIRCH_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.JUNGLE_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.ACACIA_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.DARK_OAK_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.MANGROVE_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.CHERRY_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.BAMBOO_FURNACE_RAFT.get());
+                            pOutput.accept(BoatloadItems.CRIMSON_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.WARPED_FURNACE_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_OAK_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_SPRUCE_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_BIRCH_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_JUNGLE_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_ACACIA_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_DARK_OAK_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_MANGROVE_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_CHERRY_BOAT.get());
+                            pOutput.accept(BoatloadItems.WIDE_BAMBOO_RAFT.get());
+                            pOutput.accept(BoatloadItems.LARGE_CRIMSON_BOAT.get());
+                            pOutput.accept(BoatloadItems.LARGE_WARPED_BOAT.get());
                         }).build());
     }
     if (Services.PLATFORM.isModLoaded(CompatUtils.SULLYS_MOD)) {
