@@ -17,12 +17,15 @@ import com.teamabnormals.upgrade_aquatic.core.UpgradeAquatic;
 import com.teamabnormals.upgrade_aquatic.core.registry.UABlocks;
 import com.teamabnormals.upgrade_aquatic.core.registry.UAItems;
 import com.teamabnormals.upgrade_aquatic.core.registry.UAMobEffects;
+import com.uraneptus.pigsteel.core.registry.PigsteelBlocks;
+import com.uraneptus.pigsteel.core.registry.PigsteelItems;
 import com.uraneptus.snowpig.core.registry.SPItems;
 import com.uraneptus.sullysmod.core.registry.SMBlocks;
 import com.uraneptus.sullysmod.core.registry.SMItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 
 import java.util.function.Supplier;
 
@@ -48,6 +51,22 @@ static {
                             pOutput.accept(SPItems.FROZEN_PORKCHOP.get());
                             pOutput.accept(SPItems.FROZEN_HAM.get());
                             pOutput.accept(SPItems.SNOW_PIG_EGG.get());
+                        }).build());
+    }
+    if (Services.PLATFORM.isModLoaded(CompatUtils.PIGSTEEL)) {
+        final Supplier<CreativeModeTab> PIGSTEEL_TAB = registerCreativeModeTab("pigsteel_tab",
+                () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(PigsteelBlocks.PORKSLAG.get()))
+                        .title(Component.translatable("magnify.pigsteel_tab"))
+                        .displayItems((pParameters, pOutput) -> {
+                            pOutput.accept(PigsteelBlocks.PORKSLAG.get());
+                            pOutput.accept(PigsteelItems.PIGSTEEL_CHUNK.get());
+                            pOutput.accept(PigsteelBlocks.PIGSTEEL_CHUNK_BLOCK.get());
+                            for (Block block : PigsteelBlocks.NEXT_BY_BLOCK.get().values()) {
+                                pOutput.accept(block);
+                            }
+                            for (Block block : PigsteelBlocks.NEXT_WAXED_BY_BLOCK.get().values()) {
+                                pOutput.accept(block);
+                            }
                         }).build());
     }
     if (Services.PLATFORM.isModLoaded(CompatUtils.BUZZIER_BEES)) {

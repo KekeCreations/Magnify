@@ -34,6 +34,8 @@ dependencies {
     modImplementation 'com.electronwill.night-config:toml:3.6.0'
     modImplementation "curse.maven:caffeinated-835826:4659359"
     modImplementation "curse.maven:snow-pig-fabric-469594:5396518"
+    modImplementation "curse.maven:pigsteel-448941:5648715"
+    modImplementation "curse.maven:trimmed-857036:4845942"
 }
 
 loom {

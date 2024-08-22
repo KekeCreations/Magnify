@@ -8,6 +8,7 @@ V1.1.0
 • Added Boatload Support
 • Added Buzzier Bees Support
 • Added Snow Pig Support
+• Added Pigsteel Support
 
 
 V1.0.0
