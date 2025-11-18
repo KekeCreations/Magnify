@@ -1,6 +1,5 @@
 package com.kekecreations.magnify;
 
-import com.kekecreations.magnify.core.platform.ForgeRegistryHelper;
 import com.kekecreations.magnify.core.registry.MagnifyForgeCreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,7 +12,6 @@ public class ForgeMagnify {
     public ForgeMagnify() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ForgeRegistryHelper.TABS.register(eventBus);
         MagnifyForgeCreativeTabs.register();
         Magnify.init();
 

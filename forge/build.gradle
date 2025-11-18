@@ -10,6 +10,7 @@ base {
 dependencies {
     //DEV QOL
     implementation fg.deobf("curse.maven:jei-238222:5604706")
+    implementation fg.deobf("curse.maven:jinxedlib-1203401:6630668")
 
 
     implementation fg.deobf("curse.maven:artsandcrafts-1034791:5579912")

@@ -2,21 +2,18 @@ package com.kekecreations.magnify.core.registry;
 
 import blueduck.dustrial.dustrialdecor.registry.DustrialBlocks;
 import blueduck.jollyboxes.registry.JollyBoxesBlocks;
-import com.illusivesoulworks.comforts.common.ComfortsRegistry;
-import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.ACItems;
-import com.kekecreations.magnify.common.util.CompatUtils;
-import com.kekecreations.magnify.common.util.CreativeCategoryUtils;
+import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryHelper;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
+import com.kekecreations.magnify.Magnify;
+import com.kekecreations.magnify.common.util.SupportedModList;
 import com.kekecreations.magnify.core.platform.Services;
 import com.teamabnormals.boatload.core.registry.BoatloadItems;
 import com.teamabnormals.buzzier_bees.core.registry.BBBlocks;
 import com.teamabnormals.buzzier_bees.core.registry.BBItems;
 import com.teamabnormals.clayworks.core.ClayworksConfig;
 import com.teamabnormals.clayworks.core.registry.ClayworksBlocks;
-import com.teamabnormals.upgrade_aquatic.core.UpgradeAquatic;
 import com.teamabnormals.upgrade_aquatic.core.registry.UABlocks;
 import com.teamabnormals.upgrade_aquatic.core.registry.UAItems;
-import com.teamabnormals.upgrade_aquatic.core.registry.UAMobEffects;
 import com.uraneptus.pigsteel.core.registry.PigsteelBlocks;
 import com.uraneptus.pigsteel.core.registry.PigsteelItems;
 import com.uraneptus.snowpig.core.registry.SPItems;
@@ -24,7 +21,6 @@ import com.uraneptus.sullysmod.core.registry.SMBlocks;
 import com.uraneptus.sullysmod.core.registry.SMItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 
 import java.util.function.Supplier;
@@ -32,7 +28,7 @@ import java.util.function.Supplier;
 public class MagnifyForgeCreativeTabs {
 
 static {
-    if (Services.PLATFORM.isModLoaded(CompatUtils.JOLLY_BOXES)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.JOLLY_BOXES)) {
         final Supplier<CreativeModeTab> JOLLY_BOXES_TAB = registerCreativeModeTab("jolly_boxes_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(JollyBoxesBlocks.LARGE_JOLLY_BOX.get()))
                         .title(Component.translatable("magnify.jolly_boxes_tab"))
@@ -42,7 +38,7 @@ static {
                             pOutput.accept(JollyBoxesBlocks.LARGE_JOLLY_BOX.get());
                         }).build());
     }
-    if (Services.PLATFORM.isModLoaded(CompatUtils.SNOW_PIG)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.SNOW_PIG)) {
         final Supplier<CreativeModeTab> SNOW_PIG_TAB = registerCreativeModeTab("snow_pig_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(SPItems.FROZEN_HAM.get()))
                         .title(Component.translatable("magnify.snow_pig_tab"))
@@ -53,7 +49,7 @@ static {
                             pOutput.accept(SPItems.SNOW_PIG_EGG.get());
                         }).build());
     }
-    if (Services.PLATFORM.isModLoaded(CompatUtils.PIGSTEEL)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.PIGSTEEL)) {
         final Supplier<CreativeModeTab> PIGSTEEL_TAB = registerCreativeModeTab("pigsteel_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(PigsteelBlocks.PORKSLAG.get()))
                         .title(Component.translatable("magnify.pigsteel_tab"))
@@ -69,7 +65,7 @@ static {
                             }
                         }).build());
     }
-    if (Services.PLATFORM.isModLoaded(CompatUtils.BUZZIER_BEES)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.BUZZIER_BEES)) {
         final Supplier<CreativeModeTab> BUZZIER_BEES_TAB = registerCreativeModeTab("buzzier_bees_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(BBItems.BOTTLE_OF_BEE.get()))
                         .title(Component.translatable("magnify.buzzier_bees_tab"))
@@ -103,7 +99,7 @@ static {
                             pOutput.accept(BBItems.HONEY_BREAD.get());
                         }).build());
     }
-    if (Services.PLATFORM.isModLoaded(CompatUtils.BOATLOAD)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.BOATLOAD)) {
         final Supplier<CreativeModeTab> BOATLOAD_TAB = registerCreativeModeTab("boatload_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(BoatloadItems.LARGE_CRIMSON_BOAT.get()))
                         .title(Component.translatable("magnify.boatload_tab"))
@@ -136,7 +132,7 @@ static {
                             pOutput.accept(BoatloadItems.LARGE_WARPED_BOAT.get());
                         }).build());
     }
-    if (Services.PLATFORM.isModLoaded(CompatUtils.SULLYS_MOD)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.SULLYS_MOD)) {
         final Supplier<CreativeModeTab> SULLYS_MOD_TAB = registerCreativeModeTab("sullysmod_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(SMBlocks.JADE_FLINGER_TOTEM.get()))
                         .title(Component.translatable("magnify.sullys_mod_tab"))
@@ -194,7 +190,7 @@ static {
                             pOutput.accept(SMBlocks.JADE_FLINGER_TOTEM.get());
                         }).build());
     }
-    if (Services.PLATFORM.isModLoaded(CompatUtils.UPGRADE_AQUATIC)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.UPGRADE_AQUATIC)) {
         final Supplier<CreativeModeTab> UPGRADE_AQUATIC_TAB = registerCreativeModeTab("upgrade_aquatic_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(UAItems.THRASHER_TOOTH.get()))
                         .title(Component.translatable("magnify.upgrade_aquatic_tab"))
@@ -495,7 +491,7 @@ static {
                             pOutput.accept(UABlocks.ELDER_PRISMARINE_CORAL_BLOCK.get());
                         }).build());
     }
-    if (Services.PLATFORM.isModLoaded(CompatUtils.DUSTRIAL_DECOR)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.DUSTRIAL_DECOR)) {
         final Supplier<CreativeModeTab> DUSTRIAL_DECOR_TAB = registerCreativeModeTab("dustrial_decor_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(DustrialBlocks.CARDBOARD_BOX.get()))
                         .title(Component.translatable("magnify.dustrial_decor_tab"))
@@ -632,7 +628,7 @@ static {
                             pOutput.accept(DustrialBlocks.BLACK_LIGHT.get());
                         }).build());
     }
-    if (Services.PLATFORM.isModLoaded(CompatUtils.CLAYWORKS)) {
+    if (Services.PLATFORM.isModLoaded(SupportedModList.CLAYWORKS)) {
         final Supplier<CreativeModeTab> CLAYWORKS_TAB = registerCreativeModeTab("clayworks_tab",
                 () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).icon(() -> new ItemStack(ClayworksBlocks.KILN.get()))
                         .title(Component.translatable("magnify.clayworks_tab"))
@@ -641,7 +637,7 @@ static {
                                 pOutput.accept(ClayworksBlocks.KILN.get());
                             }
                             if (ClayworksConfig.COMMON.decoratedPotColors.get()) {
-                                for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
+                                for (DyeColor colour : JinxedCreativeCategoryHelper.colourOrder) {
                                     pOutput.accept(ClayworksBlocks.getPotFromDyeColor(colour));
                                 }
                             }
@@ -731,7 +727,7 @@ static {
 
 
     private static <T extends CreativeModeTab> Supplier<T> registerCreativeModeTab(String name, Supplier<T> tabSupplier) {
-        return Services.REGISTRY.registerCreativeModeTab(name, tabSupplier);
+        return JinxedRegistryHelper.registerCreativeModeTab(Magnify.MOD_ID, name, tabSupplier);
     }
 
     public static void register() {

@@ -24,6 +24,7 @@ dependencies {
     //DEV QOL
     modImplementation "curse.maven:modmenu-308702:5162837"
     modImplementation "curse.maven:jei-238222:5604705"
+    modImplementation "curse.maven:jinxedlib-1203401:6627520"
 
     //COMPAT
     modImplementation "curse.maven:artsandcrafts-1034791:5579910"
